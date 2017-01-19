@@ -14,22 +14,28 @@ private:
 public:
 	d10p(string inputDocumentPath_)
 	{
-		setInputDocumentPath(inputDocumentPath_);
+		SetInputDocumentPath(inputDocumentPath_);
 	}
 	~d10p(){};
 	
-	void setInputDocumentPath(string inputDocumentPath_)
+	void SetInputDocumentPath(string inputDocumentPath_)
 	{
 		inputDocumentPath = inputDocumentPath_;
 	}
-	string getInputDocumentPath()
+	string GetInputDocumentPath()
 	{
 		return inputDocumentPath;
 	}
 
 	// Get contents from file
-	string getInputDocumentContent()
+	string GetInputDocumentContent()
 	{
 		/*TODO*/
+	}
+
+	// print info
+	void PrintInfo()
+	{
+		cout << "d10print Assistant - 2016 v0.1\nReport bugs here: http://goo.gl/5fBuxa\n\r" << endl;
 	}
 };
