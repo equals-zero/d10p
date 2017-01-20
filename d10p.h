@@ -12,6 +12,7 @@ private:
 	string inputDocumentPath;
 	string inputText;
 public:
+	d10p();
 	d10p(string inputDocumentPath_)
 	{
 		SetInputDocumentPath(inputDocumentPath_);
@@ -28,14 +29,45 @@ public:
 	}
 
 	// Get contents from file
-	string GetInputDocumentContent()
+	string FetchFileContent()
 	{
-		/*TODO*/
+		if(inputDocumentPath!="")
+		{
+			if(CheckIfFileExists(inputDocumentPath))
+			{
+				/* File has been found. */
+				ifstream infile { inputDocumentPath };
+				string inputText
+				{
+					/* C++ 17 magic */
+					istreambuf_iterator<char>(infile),
+					istreambuf_iterator<char>()
+				};
+				cout << "Content:\r\n" << inputText << endl;
+				
+
+			}
+			else
+			{
+				cout << "File could not be found." << endl;
+			}
+		}
+		else
+		{
+			cout << "inputDocumentPath has not been set." << endl;
+		}
 	}
 
 	// print info
 	void PrintInfo()
 	{
 		cout << "d10print Assistant - 2016 v0.1\nReport bugs here: http://goo.gl/5fBuxa\n\r" << endl;
+	}
+
+	// check if file exists
+	bool CheckIfFileExists(string filePath)
+	{
+		ifstream ifile(filePath.c_str());
+		return (bool)ifile;
 	}
 };

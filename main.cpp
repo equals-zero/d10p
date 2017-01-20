@@ -14,6 +14,7 @@ int main(int argc, char const *argv[])
 		d10p textInstance (argv[1]);
 		textInstance.PrintInfo();
 		cout << "Chosen File: " << textInstance.GetInputDocumentPath() << endl;
+		textInstance.FetchFileContent();
 	}
 	else
 	{
