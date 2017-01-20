@@ -9,7 +9,7 @@ or
 
 Compile using G++:
 ```
-$ g++ main.cpp -o d10p
+$ g++ main.cpp -std=gnu++11 -o d10p
 ``` 
 
 
