@@ -13,7 +13,7 @@ $ g++ main.cpp -std=gnu++11 -o d10p
 ``` 
 
 
-Input though pipe hasn't been implemented yet. Use something like this instead:
+Input through pipe (aka stdin) hasn't been implemented yet. Use something like this instead:
 ```
 $ fortune > /tmp/printThis && ./d10p /tmp/printThis
 ```
