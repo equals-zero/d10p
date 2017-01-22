@@ -12,13 +12,14 @@ private:
 	string inputDocumentPath;
 	string inputText;
 public:
-	d10p();
-	d10p(string inputDocumentPath_)
+	d10p();	// standard konstruktor
+	d10p(string inputDocumentPath_)	// konstruktor
 	{
 		SetInputDocumentPath(inputDocumentPath_);
 	}
-	~d10p(){};
+	~d10p(){};	// destruktor
 	
+	// get/set vars
 	void SetInputDocumentPath(string inputDocumentPath_)
 	{
 		inputDocumentPath = inputDocumentPath_;
@@ -44,8 +45,6 @@ public:
 					istreambuf_iterator<char>()
 				};
 				cout << "Content:\r\n" << inputText << endl;
-				
-
 			}
 			else
 			{
